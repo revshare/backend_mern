@@ -25,7 +25,7 @@ const getWorkout = async (req ,res) => {
 const createWorkout  = async (req ,res) => {
     const {title, load, reps} = req.body
 
-    //create process
+    //create PROCESS
     try{
         const workout = await Workout.create({title, load, reps})
         res.status(200).json(workout)
